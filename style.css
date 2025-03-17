@@ -1,0 +1,85 @@
+/* Estilos generales para la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298); /* Fondo degradado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Estilo para el canvas (el área del juego) */
+#gameCanvas {
+    border: 5px solid #fff;  /* Borde blanco alrededor del canvas */
+    border-radius: 10px;  /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);  /* Sombra para dar profundidad */
+    background: rgba(0, 0, 0, 0.1); /* Fondo semitransparente para el canvas */
+}
+
+/* Estilo para los controles del juego (si hay botones u otros elementos) */
+button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #2a5298;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1e3c72;
+}
+
+/* Mensajes de alerta o instrucciones */
+.message {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.game-over {
+    color: red;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Estilo para los enemigos y otros elementos del juego */
+.enemy {
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+.enemy:hover {
+    transform: scale(1.2); /* Efecto de zoom cuando el jugador pasa por encima */
+}
+
+/* Ajuste responsivo para móviles */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #gameCanvas {
+        width: 100%;
+        max-width: 100%;
+    }
+}
